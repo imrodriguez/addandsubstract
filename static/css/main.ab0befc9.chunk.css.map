@@ -1,0 +1,1 @@
+{"version":3,"sources":["/home/imanol/www/addandsubstract/src/components/Operation/Operation.scss"],"names":[],"mappings":"AAAA,WACI,cAAe,CACf,qBAAsB,CACtB,gBAAiB,CACjB,mBAAoB,CACpB,cAAe","file":"main.ab0befc9.chunk.css","sourcesContent":[".Operation {\n    margin-top: 10%;\n    border: 4px solid #000;\n    padding-top: 80px;\n    padding-bottom: 80px;\n    font-size: 5rem;\n}"]}
