@@ -69,6 +69,8 @@ class Main extends PureComponent {
     }
     return (
       <div className="MainWrapper">
+        {this.state.result}
+        {console.log(this.state.result)}
         <Operation numbers={this.state.numbers} result={this.state.result} check={this.state.check} />
       </div>
     );
