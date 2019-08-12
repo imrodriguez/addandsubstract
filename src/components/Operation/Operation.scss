@@ -1,7 +1,18 @@
+$primary: #FFC107;
+$secondary: #FF9800;
+
+body {
+    background-color: $primary;
+}
+
 .Operation {
     margin-top: 10%;
-    border: 4px solid #000;
+    border: 15px solid #000;
     padding-top: 80px;
     padding-bottom: 80px;
-    font-size: 5rem;
+    span {
+        font-size: 11rem;
+        font-weight: 600;
+        letter-spacing: 10px;
+    }
 }

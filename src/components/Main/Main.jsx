@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import Operation from '../Operation/index';
-import Resut from '../Resut/index';
+import Result from '../Result/index';
 
 class Main extends PureComponent {
   constructor(props) {
@@ -67,9 +67,9 @@ class Main extends PureComponent {
         </div>
       );
     }
-    if (this.state.check!='') {
+    if (this.state.check === true || this.state.check === false) {
       return (
-        <Resut check={this.state.check}/>
+        <Result check={this.state.check} />
       );
     }
     return (
