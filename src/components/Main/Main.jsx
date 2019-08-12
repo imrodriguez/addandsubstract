@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import Operation from '../Operation/index';
+import Resut from '../Resut/index';
 
 class Main extends PureComponent {
   constructor(props) {
@@ -30,7 +31,7 @@ class Main extends PureComponent {
 
   checkResult = () => {
     let numbersWords = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
-    let resultInt = numbersWords.indexOf(this.state.result.label);
+    let resultInt = numbersWords.indexOf(this.state.result);
     if ((this.state.numbers.num1 + this.state.numbers.num2) === resultInt) {
       this.setState({ check: true });
     } else {
@@ -39,13 +40,11 @@ class Main extends PureComponent {
   }
 
   detect = () => {
-    console.log('detect');
     const options = { probabilityThreshold: 0.7 };
     this.setState({ classifier: window.ml5.soundClassifier('SpeechCommands18w', options, this.modelReady) })
   }
 
   modelReady = () => {
-    console.log('modelReady');
     this.state.classifier.classify(this.gotResult);
   }
 
@@ -54,7 +53,8 @@ class Main extends PureComponent {
       this.setState({ error: { state: true, message: error } });
       return;
     }
-    this.setState({ result: result[0] });
+    let value = result[0].label;
+    this.setState({ result: value });
     this.checkResult();
   }
 
@@ -67,9 +67,13 @@ class Main extends PureComponent {
         </div>
       );
     }
+    if (this.state.check!='') {
+      return (
+        <Resut check={this.state.check}/>
+      );
+    }
     return (
       <div className="MainWrapper">
-        {this.state.result}
         {console.log(this.state.result)}
         <Operation numbers={this.state.numbers} result={this.state.result} check={this.state.check} />
       </div>
