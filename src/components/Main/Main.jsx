@@ -32,10 +32,12 @@ class Main extends PureComponent {
   checkResult = () => {
     let numbersWords = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
     let resultInt = numbersWords.indexOf(this.state.result);
-    if ((this.state.numbers.num1 + this.state.numbers.num2) === resultInt) {
-      this.setState({ check: true });
-    } else {
-      this.setState({ check: false });
+    if (this.state.check === '') {
+      if ((this.state.numbers.num1 + this.state.numbers.num2) === resultInt) {
+        this.setState({ check: true });
+      } else {
+        this.setState({ check: false });
+      }
     }
   }
 
