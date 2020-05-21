@@ -1,18 +1,26 @@
 {
   "files": {
-    "main.css": "/sumsWithVoice/static/css/main.1cc89bb7.chunk.css",
-    "main.js": "/sumsWithVoice/static/js/main.9022d4e9.chunk.js",
-    "main.js.map": "/sumsWithVoice/static/js/main.9022d4e9.chunk.js.map",
-    "runtime~main.js": "/sumsWithVoice/static/js/runtime~main.8c87f0dc.js",
-    "runtime~main.js.map": "/sumsWithVoice/static/js/runtime~main.8c87f0dc.js.map",
-    "static/css/2.2fb3b135.chunk.css": "/sumsWithVoice/static/css/2.2fb3b135.chunk.css",
-    "static/js/2.bc5e3525.chunk.js": "/sumsWithVoice/static/js/2.bc5e3525.chunk.js",
-    "static/js/2.bc5e3525.chunk.js.map": "/sumsWithVoice/static/js/2.bc5e3525.chunk.js.map",
+    "main.css": "/sumsWithVoice/static/css/main.70e4ba21.chunk.css",
+    "main.js": "/sumsWithVoice/static/js/main.4194c8ba.chunk.js",
+    "main.js.map": "/sumsWithVoice/static/js/main.4194c8ba.chunk.js.map",
+    "runtime-main.js": "/sumsWithVoice/static/js/runtime-main.afe774ba.js",
+    "runtime-main.js.map": "/sumsWithVoice/static/js/runtime-main.afe774ba.js.map",
+    "static/css/2.be3f3603.chunk.css": "/sumsWithVoice/static/css/2.be3f3603.chunk.css",
+    "static/js/2.3ec268cc.chunk.js": "/sumsWithVoice/static/js/2.3ec268cc.chunk.js",
+    "static/js/2.3ec268cc.chunk.js.map": "/sumsWithVoice/static/js/2.3ec268cc.chunk.js.map",
     "index.html": "/sumsWithVoice/index.html",
-    "precache-manifest.db436f93bfedd540696a14126c7d8453.js": "/sumsWithVoice/precache-manifest.db436f93bfedd540696a14126c7d8453.js",
+    "precache-manifest.3909216d16c6de6c1600f3f774092b9c.js": "/sumsWithVoice/precache-manifest.3909216d16c6de6c1600f3f774092b9c.js",
     "service-worker.js": "/sumsWithVoice/service-worker.js",
-    "static/css/2.2fb3b135.chunk.css.map": "/sumsWithVoice/static/css/2.2fb3b135.chunk.css.map",
-    "static/css/main.1cc89bb7.chunk.css.map": "/sumsWithVoice/static/css/main.1cc89bb7.chunk.css.map",
+    "static/css/2.be3f3603.chunk.css.map": "/sumsWithVoice/static/css/2.be3f3603.chunk.css.map",
+    "static/css/main.70e4ba21.chunk.css.map": "/sumsWithVoice/static/css/main.70e4ba21.chunk.css.map",
+    "static/js/2.3ec268cc.chunk.js.LICENSE.txt": "/sumsWithVoice/static/js/2.3ec268cc.chunk.js.LICENSE.txt",
     "static/media/index.css": "/sumsWithVoice/static/media/roboto-latin-900italic.ebf6d164.woff2"
-  }
+  },
+  "entrypoints": [
+    "static/js/runtime-main.afe774ba.js",
+    "static/css/2.be3f3603.chunk.css",
+    "static/js/2.3ec268cc.chunk.js",
+    "static/css/main.70e4ba21.chunk.css",
+    "static/js/main.4194c8ba.chunk.js"
+  ]
 }
