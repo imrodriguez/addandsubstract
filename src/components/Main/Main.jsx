@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react';
-import Operation from '../Operation/index';
-import Result from '../Result/index';
+import Operation from '../Operation';
+import Result from '../Result';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMicrophone } from '@fortawesome/free-solid-svg-icons';
 
 class Main extends PureComponent {
   constructor(props) {
@@ -29,10 +31,12 @@ class Main extends PureComponent {
     });
   }
 
-  checkResult = () => {
+  checkResult = (result) => {
+    this.setState({ classifier: '' });
     let numbersWords = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
-    let resultInt = numbersWords.indexOf(this.state.result);
+    let resultInt = numbersWords.indexOf(result);
     if (this.state.check === '') {
+      this.setState({ result: result });
       if ((this.state.numbers.num1 + this.state.numbers.num2) === resultInt) {
         this.setState({ check: true });
       } else {
@@ -53,33 +57,27 @@ class Main extends PureComponent {
   gotResult = (error, result) => {
     if (error) {
       this.setState({ error: { state: true, message: error } });
-      return;
+    } else {
+      this.checkResult(result[0].label);
     }
-    let value = result[0].label;
-    this.setState({ result: value });
-    this.checkResult();
   }
 
   render() {
     if (this.state.error.state) {
       return (
-        <div>
-          <h1>Something went wrong.</h1>
+        <div align="center" style={{marginTop: 'margin-top: 10%'}}>
+          <FontAwesomeIcon icon={faMicrophone} size="lg" style={{fontSize: '5em'}}/>
+          <h2>You should accept microphone permission to use this application</h2>
           <p>{this.state.error.message}</p>
         </div>
       );
     }
     if (this.state.check === true || this.state.check === false) {
       return (
-        <Result check={this.state.check} />
+        <Result check={this.state.check} result={this.state.result} />
       );
     }
-    return (
-      <div className="MainWrapper">
-        {console.log(this.state.result)}
-        <Operation numbers={this.state.numbers} result={this.state.result} check={this.state.check} />
-      </div>
-    );
+    return <Operation numbers={this.state.numbers} result={this.state.result} check={this.state.check} />
   }
 }
 

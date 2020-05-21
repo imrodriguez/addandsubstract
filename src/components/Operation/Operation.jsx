@@ -5,10 +5,10 @@ import './Operation.scss';
 
 const Operation = (props) => (
   <Container maxWidth="md" className="Operation">
-    <Typography component="span">
+    <h2 align="center">Say the result of:</h2>
+    <p align="center">Say it in English</p>
+    <Typography component="p" align="center" className="operation">
       {props.numbers.num1} + {props.numbers.num2}
-      =
-      {props.result}
     </Typography>
   </Container>
 );
